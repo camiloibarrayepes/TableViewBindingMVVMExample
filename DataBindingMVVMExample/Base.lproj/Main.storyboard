@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DataBindingMVVMExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WZb-xq-RIy">
+                                <rect key="frame" x="0.0" y="76" width="414" height="594"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="98s-gg-2AB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SHt-B8-U1K"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="RZQ-NR-IuE">
+                                <rect key="frame" x="0.0" y="678" width="414" height="200"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ux3-QV-4RZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iNe-1S-X8g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qip-la-2x4">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kC3-NZ-3bH"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Item"/>
+                                        <connections>
+                                            <action selector="onAddItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWw-Jc-WhJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="ijG-ho-M7n"/>
+                                    <constraint firstAttribute="height" constant="200" id="qG6-Ym-nQM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WZb-xq-RIy" secondAttribute="trailing" id="FDd-Rh-JH8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RZQ-NR-IuE" secondAttribute="trailing" id="H2Z-sh-1vB"/>
+                            <constraint firstItem="RZQ-NR-IuE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="16" id="RXf-co-evB"/>
+                            <constraint firstItem="WZb-xq-RIy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="STl-0u-GMO"/>
+                            <constraint firstItem="RZQ-NR-IuE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b9w-5x-JT4"/>
+                            <constraint firstItem="RZQ-NR-IuE" firstAttribute="top" secondItem="WZb-xq-RIy" secondAttribute="bottom" constant="8" id="i9S-dy-mdL"/>
+                            <constraint firstItem="WZb-xq-RIy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="j1l-Uz-Img"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewItems" destination="WZb-xq-RIy" id="49o-ho-jjC"/>
+                        <outlet property="textFieldNewItem" destination="ux3-QV-4RZ" id="IIW-iz-MgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
